@@ -9,6 +9,8 @@ end
 
 get '/api/v1.png' do
   values = params[:values].split(',').map(&:to_f)
+
+  # http://bit.ly/1qnR55Y
   blob = Sparklines.plot(values,
     dot_size: 4,
     height: 30,
