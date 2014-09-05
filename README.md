@@ -1,12 +1,12 @@
 # Sparkle
 
-API for generating sparkline images.
+API for generating sparklines as PNGs.
 
 ## Usage
 
-Add the values as a comma-separated list of values, e.g.
+Add the values as a comma-separated list, e.g.
 
-http://sparklines.herokuapp.com/api/v1?values=1,4,5,3,2,5
+http://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5
 
 ## Development
 
@@ -17,4 +17,4 @@ bundle
 bundle exec shotgun
 ```
 
-Then open http://localhost:9393/api/v1?values=1,4,5,3,2,5.
+Then open [http://localhost:9393/api/v1.png?values=1,4,5,3,2,5](http://localhost:9393/api/v1.png?values=1,4,5,3,2,5).

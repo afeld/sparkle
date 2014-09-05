@@ -7,7 +7,7 @@ get '/' do
   redirect to('https://github.com/afeld/sparkle')
 end
 
-get '/api/v1' do
+get '/api/v1.png' do
   values = params[:values].split(',').map(&:to_f)
   blob = Sparklines.plot(values,
     dot_size: 4,
