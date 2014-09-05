@@ -6,7 +6,7 @@ API for generating sparklines as PNGs.
 
 Add the values as a comma-separated list, e.g.
 
-http://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5
+https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5
 
 ## Development
 
