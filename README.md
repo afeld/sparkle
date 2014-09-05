@@ -15,5 +15,6 @@ Requires [ImageMagick](http://www.imagemagick.org/) >= 6.4.9.
 ```bash
 bundle
 bundle exec shotgun
-open http://localhost:8080/api/v1?values=1,4,5,3,2,5
 ```
+
+Then open http://localhost:9393/api/v1?values=1,4,5,3,2,5.
