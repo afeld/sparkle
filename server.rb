@@ -3,7 +3,7 @@ require 'bundler'
 
 Bundler.require
 
-get '/v1' do
+get '/api/v1' do
   values = params[:values].split(',').map(&:to_f)
   blob = Sparklines.plot(values,
     dot_size: 4,
