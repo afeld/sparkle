@@ -3,6 +3,10 @@ require 'bundler'
 
 Bundler.require
 
+get '/' do
+  redirect to('https://github.com/afeld/sparkle')
+end
+
 get '/api/v1' do
   values = params[:values].split(',').map(&:to_f)
   blob = Sparklines.plot(values,
