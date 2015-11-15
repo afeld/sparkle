@@ -4,7 +4,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
-    rmagick (2.13.3)
+    rmagick (2.15.4)
     shotgun (0.9)
       rack (>= 1.0)
     sinatra (1.4.5)
@@ -18,7 +18,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rmagick
+  rmagick (~> 2.15.4)
   shotgun
   sinatra
   sparklines
+
+BUNDLED WITH
+   1.10.6

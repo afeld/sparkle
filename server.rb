@@ -18,7 +18,8 @@ end
 
 get '/api/v1.png' do
   values = params[:values].split(',').map(&:to_f)
-  line_color = param_with_default(:line_color, '4A8FED')
+  color = params[:color] || '4A8FED'
+  line_color = param_with_default(:line_color, color)
 
   # http://bit.ly/1qnR55Y
   blob = Sparklines.plot(values,
