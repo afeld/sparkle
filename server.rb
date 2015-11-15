@@ -11,12 +11,7 @@ def fixnum_param_with_default(key, default)
   param_with_default(key, default).to_i
 end
 
-
-get '/' do
-  redirect to('https://github.com/afeld/sparkle')
-end
-
-get '/api/v1.png' do
+def generate_image(file_type)
   values = params[:values].split(',').map(&:to_f)
   line_color = param_with_default(:line_color, '4A8FED')
 
@@ -28,6 +23,22 @@ get '/api/v1.png' do
     step: fixnum_param_with_default(:step, 30)
   )
 
-  content_type :png
+  content_type file_type
   blob
+end
+
+get '/' do
+  redirect to('https://github.com/afeld/sparkle')
+end
+
+get '/api/v1.png' do
+  generate_image(:png)
+end
+
+get '/api/v1.jpg' do
+  generate_image(:jpg)
+end
+
+get '/api/v1.gif' do
+  generate_image(:gif)
 end
