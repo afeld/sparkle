@@ -17,14 +17,17 @@ get '/' do
 end
 
 get '/api/v1.png' do
+  if (params[:color]) # take query string for "color" value or assign default if not present
+    color = params[:color] 
+  else color = param_with_default(:line_color, '4A8FED')
+  end
   values = params[:values].split(',').map(&:to_f)
-  line_color = param_with_default(:line_color, '4A8FED')
 
   # http://bit.ly/1qnR55Y
   blob = Sparklines.plot(values,
     dot_size: fixnum_param_with_default(:dot_size, 4),
     height: fixnum_param_with_default(:height, 30),
-    line_color: "##{line_color}",
+    line_color: "##{color}",
     step: fixnum_param_with_default(:step, 30)
   )
 
