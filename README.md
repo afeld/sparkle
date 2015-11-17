@@ -1,21 +1,21 @@
 # Sparkle
 
-API for generating sparklines as PNG, JPG and GIFs.
+API for generating sparklines as images.
 
 ## Usage
 
-Use the file extension of your desired file type in the URL.
+Example:
 
 https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5
 
-The following query string parameters are available:
+Use the file extension of your desired file type in the URL (`.png`, `.jpg`, or `.gif`). The following query string parameters are available:
 
-parameter | default | purpose  
-----------|---------|-----------------------------------
-values    |         | (required) comma-separated list of values to graph
-line_color| 4A8FED  | color of line			        		   
-height    | 30      | height of image in pixels		     
-step	    | 30      | distance between steps in pixels  
+parameter  | default | purpose
+-----------|---------|-----------------------------------
+values     |         | (required) comma-separated list of values to graph
+line_color | 4A8FED  | color of line in hex
+height     | 30      | height of image in pixels
+step       | 30      | distance between steps in pixels
 
 Example:
 
