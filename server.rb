@@ -12,7 +12,6 @@ def fixnum_param_with_default(key, default)
 end
 
 def color_param_with_default(key, default)
-  params[key]
   if params[key] === "transparent" 
    return params[key]
   elsif /^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/ === params[key] 
