@@ -11,7 +11,7 @@ def width_with_default( val_length)
   if params[:width]
     params[:width].to_i / (val_length - 1)
   else
-    nil
+    fixnum_param_with_default(:step, 30)
   end
 end
 
@@ -23,7 +23,7 @@ def generate_image(file_type)
   values = params[:values].split(',').map(&:to_f)
   background_color = param_with_default(:background_color, 'FFFFFF')
   line_color = param_with_default(:line_color, '4A8FED')
-  step_width = width_with_default(values.length) || fixnum_param_with_default(:step, 30)
+  step_width = width_with_default(values.length)
   # http://bit.ly/1qnR55Y
   blob = Sparklines.plot(values,
     background_color: "##{background_color}",
