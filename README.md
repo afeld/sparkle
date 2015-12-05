@@ -13,7 +13,10 @@ Use the file extension of your desired file type in the URL (`.png`, `.jpg`, or 
 parameter | default | unit | purpose
 --- | --- | --- | ---
 `values` | | | (required) comma-separated list of values to graph
-`background_color` | `FFFFFF` | hex | background color of the image
+`background_color` | `FFFFFF` | hex | background color 
+or...
+'background_color' | transparent | text | background is transparent
+
 `dot_size` | `4` | pixels | width of the line
 `height` | `30` | pixels | height of image
 `line_color` | `4A8FED` | hex | color of line
