@@ -7,7 +7,7 @@ def param_with_default(key, default)
   params[key] ? params[key] : default
 end
 
-def width_with_default( val_length)
+def width_with_default(val_length)
   if params[:width]
     params[:width].to_i / (val_length - 1)
   else

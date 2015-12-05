@@ -18,7 +18,7 @@ parameter | default | unit | purpose
 `height` | `30` | pixels | height of image
 `line_color` | `4A8FED` | hex | color of line
 `step` | `30` | pixels | distance between steps
-`width` | | pixels | total graph (overides step distance)
+`width` | | pixels | width of total graph (overides step distance)
 
 Example:
 
