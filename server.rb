@@ -11,20 +11,36 @@ def fixnum_param_with_default(key, default)
   param_with_default(key, default).to_i
 end
 
-def color_param_with_default(key, default)
-  if params[key] === "transparent" 
-   return params[key]
-  elsif /^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/ === params[key] 
-    return "##{params[key]}"
+# def color_param_with_default(key, default)
+#   if params[key] === "transparent" 
+#    params[key]
+#   elsif /^([a-f0-9]{6}|[a-f0-9]{3})$/i === params[key] 
+#     "##{params[key]}"
+#   else
+#     "##{default}"
+#   end
+# end
+
+def hex_color?(val)
+  /^([a-f0-9]{6}|[a-f0-9]{3})$/i =~ val
+end
+
+def convert_color_param(val)
+  if hex_color?(val)
+    "##{val}"
   else
-    return "##{default}"
+    val
   end
 end
+
+# background_color = param_with_default(:background_color, 'FFFFFF')
+# background_color = convert_color_param(background_color)
 
 
 def generate_image(file_type)
   values = params[:values].split(',').map(&:to_f)
-  background_color = color_param_with_default(:background_color, 'FFFFFF')
+  background_color = param_with_default(:background_color, 'FFFFFF')
+  background_color = convert_color_param(background_color)
   line_color = param_with_default(:line_color, '4A8FED')
 
   # http://bit.ly/1qnR55Y
