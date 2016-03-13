@@ -7,12 +7,12 @@ GEM
     rmagick (2.15.4)
     shotgun (0.9.1)
       rack (>= 1.0)
-    sinatra (1.4.6)
-      rack (~> 1.4)
+    sinatra (1.4.7)
+      rack (~> 1.5)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
     sparklines (0.5.2)
-    tilt (2.0.1)
+    tilt (2.0.2)
 
 PLATFORMS
   ruby
@@ -24,4 +24,4 @@ DEPENDENCIES
   sparklines
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
