@@ -1,6 +1,6 @@
 # Sparkle
 
-API for generating sparklines as images.
+API for generating [sparklines](https://en.wikipedia.org/wiki/Sparkline) as images.
 
 ## Usage
 
