@@ -8,6 +8,8 @@ Example:
 
 https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5
 
+![Sparkline Example](https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5)
+
 Use the file extension of your desired file type in the URL (`.png`, `.jpg`, or `.gif`). The following query string parameters are available:
 
 parameter | default | unit | purpose
@@ -23,6 +25,8 @@ parameter | default | unit | purpose
 Example:
 
 https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5&height=150&line_color=F3F
+
+![Sparkline Example](https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5&height=150&line_color=F3F)
 
 ## Development
 
