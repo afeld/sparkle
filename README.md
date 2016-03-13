@@ -31,6 +31,7 @@ https://sparklines.herokuapp.com/api/v1.png?values=1,4,5,3,2,5&height=150&line_c
 ## Development
 
 Requires [ImageMagick](http://www.imagemagick.org/) >= 6.4.9.
+
 Requires Ruby >=1.9.1
 ```bash
 bundle
