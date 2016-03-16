@@ -27,22 +27,26 @@ def convert_color_param(val)
   end
 end
 
-def generate_image(file_type)
-  values = params[:values].split(',').map(&:to_f)
+def sparkline_options(values)
   background_color = params[:background_color] || 'FFFFFF'
   background_color = convert_color_param(background_color)
   line_color = params[:line_color] || '4A8FED'
   step_width = width_with_default(values.length)
-  # http://bit.ly/1qnR55Y
-  blob = Sparklines.plot(values,
+
+  {
     background_color: background_color,
     dot_size: fixnum_param_with_default(:dot_size, 4),
     height: fixnum_param_with_default(:height, 30),
 
     line_color: "##{line_color}",
     step: step_width
-  )
+  }
+end
 
+def generate_image(file_type)
+  values = params[:values].split(',').map(&:to_f)
+  # http://bit.ly/1qnR55Y
+  blob = Sparklines.plot(values, sparkline_options(values))
   content_type file_type
   blob
 end
