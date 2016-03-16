@@ -15,13 +15,12 @@ Use the file extension of your desired file type in the URL (`.png`, `.jpg`, or 
 parameter | default | unit | purpose
 --- | --- | --- | ---
 `values` | | | (required) comma-separated list of values to graph
-`background_color` | `FFFFFF` | hex | background color 
-`background_color` | `transparent` | text | background is transparent
+`background_color` | `FFFFFF` | [color](https://rmagick.github.io/imusage.html#color_names) | background color (hex, `rgb(R,G,B)`, `transparent`, etc.)
 `dot_size` | `4` | pixels | width of the line
 `height` | `30` | pixels | height of image
-`line_color` | `4A8FED` | hex | color of line
+`line_color` | `4A8FED` | [color](https://rmagick.github.io/imusage.html#color_names) | color of line
 `step` | `30` | pixels | distance between steps
-`width` | | pixels | fixed width of total graph (overides step distance)
+`width` | | pixels | fixed width of total graph (overrides step distance)
 
 Example:
 
