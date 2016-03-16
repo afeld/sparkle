@@ -27,19 +27,35 @@ def convert_color_param(val)
   end
 end
 
-def sparkline_options(values)
-  background_color = params[:background_color] || 'FFFFFF'
-  background_color = convert_color_param(background_color)
-  line_color = params[:line_color] || '4A8FED'
-  step_width = width_with_default(values.length)
+def background_color
+  color = params[:background_color] || 'FFFFFF'
+  convert_color_param(color)
+end
 
+def line_color
+  color = params[:line_color] || '4A8FED'
+  convert_color_param(color)
+end
+
+def step_width(values)
+  width_with_default(values.length)
+end
+
+def dot_size
+  fixnum_param_with_default(:dot_size, 4)
+end
+
+def height
+  fixnum_param_with_default(:height, 30)
+end
+
+def sparkline_options(values)
   {
     background_color: background_color,
-    dot_size: fixnum_param_with_default(:dot_size, 4),
-    height: fixnum_param_with_default(:height, 30),
-
-    line_color: "##{line_color}",
-    step: step_width
+    dot_size: dot_size,
+    height: height,
+    line_color: line_color,
+    step: step_width(values)
   }
 end
 
