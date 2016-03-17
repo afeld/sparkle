@@ -44,7 +44,8 @@ Then open [http://localhost:9393/api/v1.png?values=1,4,5,3,2,5](http://localhost
 
 ## Troubleshooting
 
-For Ubuntu (and other [Linux variants](http://stackoverflow.com/a/16775397/1476898)), the development packages are required in addition to the binaries for ImageMagick.                                                                                                        
- ```bash                                                                         
- apt-get install libmagickwand-dev imagemagick                                   
- ```                
+For Ubuntu (and other [Linux variants](http://stackoverflow.com/a/16775397/1476898)), the development packages are required in addition to the binaries for ImageMagick.
+
+```bash
+apt-get install libmagickwand-dev imagemagick
+```
